@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>森さん応援サイト</title>
+  <style>
+    #content {
+      display: none;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- コメントアウトされたテキストは表示されません -->
+  <h1>合言葉を入力してください</h1>
+  <input type="text" id="passwordInput" placeholder="ここに入力">
+  <button onclick="checkPassword()">送信</button>
+
+  <div id="content">
+    <h2>おめでとうございます！</h2>
+    <p>朗報です！<br>
+    この間、企画厚生居残りもしもしで3時くらいまでおしゃべりしてしまったのですが春合宿のとき森さんといっぱい話して楽しかったって言ってました</p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      var input = document.getElementById("passwordInput").value;
+      if (input === "なかおみゆ") {
+        document.getElementById("content").style.display = "block";
+      } else if (input === "もりひろあき") {
+        alert("ざんねん！でも関係ある人のなまえかもねーー👋");
+      } else if(input === "やまたきまお"){
+        alert("うれしい！");
+      } else {
+        alert("ちがいます！");
+      }
+    }
+  </script>
+</body>
+
+</html>
